@@ -16,6 +16,5 @@ All tasks that need to be done are in linear_regression_project.ipynb, including
 This project consists for the following files:
 
 * linear_regression_project.ipynb
-* proof.pdf
 * linear_regression_project.html
 * linear_regression_project.py
