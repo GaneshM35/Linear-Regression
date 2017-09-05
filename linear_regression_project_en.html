@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>linear_regression_project_en</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>linear_regression_project_en</title><script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/76160E47-D313-8449-90E2-56E06A8E8744/main.js" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="http://gc.kis.v2.scr.kaspersky-labs.com/4478E8A60E65-2E09-9448-313D-74E06167/abn/main.css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11784,10 +11784,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#This project is designed to get familiar with python list and linear algebra</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#This project is designed to get familiar with python list and linear algebra</span>
 <span class="c1">#You cannot use import any library yourself, especially numpy</span>
 
 <span class="n">A</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> 
@@ -11821,10 +11821,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#TODO Get the height and weight of a matrix.</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#TODO Get the height and weight of a matrix.</span>
 <span class="k">def</span> <span class="nf">shape</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">M</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
@@ -11836,10 +11836,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># run following code to test your shape function</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># run following code to test your shape function</span>
 <span class="o">%</span><span class="k">run</span> -i -e test.py LinearRegressionTestCase.test_shape
 </pre></div>
 
@@ -11857,7 +11857,7 @@ div#notebook {
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>.
 ----------------------------------------------------------------------
-Ran 1 test in 0.004s
+Ran 1 test in 0.050s
 
 OK
 </pre>
@@ -11879,19 +11879,17 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO in-place operation, no return value</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO in-place operation, no return value</span>
 <span class="c1"># TODO round all elements in M to decPts</span>
 <span class="k">def</span> <span class="nf">matxRound</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">decPts</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">decPts</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">M</span><span class="p">)):</span>
-        <span class="c1">#Foreach the column of every matrix column</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>
             <span class="n">M</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">decPts</span><span class="p">)</span>
-               
 </pre></div>
 
 </div>
@@ -11901,10 +11899,10 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># run following code to test your matxRound function</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># run following code to test your matxRound function</span>
 <span class="o">%</span><span class="k">run</span> -i -e test.py LinearRegressionTestCase.test_matxRound
 </pre></div>
 
@@ -11922,7 +11920,7 @@ OK
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>.
 ----------------------------------------------------------------------
-Ran 1 test in 0.032s
+Ran 1 test in 0.043s
 
 OK
 </pre>
@@ -11944,12 +11942,12 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#TODO compute transpose of M</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#TODO compute transpose of M</span>
 <span class="k">def</span> <span class="nf">transpose</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">col</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">M</span><span class="p">)]</span>            
+    <span class="k">return</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">col</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">M</span><span class="p">)]</span>
 </pre></div>
 
 </div>
@@ -11959,10 +11957,10 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># run following code to test your transpose function</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># run following code to test your transpose function</span>
 <span class="o">%</span><span class="k">run</span> -i -e test.py LinearRegressionTestCase.test_transpose
 </pre></div>
 
@@ -11980,7 +11978,7 @@ OK
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>.
 ----------------------------------------------------------------------
-Ran 1 test in 0.011s
+Ran 1 test in 0.168s
 
 OK
 </pre>
@@ -12002,27 +12000,15 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#TODO compute matrix multiplication AB, return None if the dimensions don&#39;t match</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#TODO compute matrix multiplication AB, return None if the dimensions don&#39;t match</span>
 <span class="k">def</span> <span class="nf">matxMultiply</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Calculate the product of A and B.</span>
-<span class="sd">    When the column count of A is not equal the row count of B, the</span>
-<span class="sd">    product is None.</span>
-<span class="sd">    When the A or B is equal None, the product is None.</span>
-<span class="sd">    </span>
-<span class="sd">    @param A: the first matrix</span>
-<span class="sd">    @param B: the second matrix</span>
-<span class="sd">    @return: the product.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Verify the A and B.</span>
-    <span class="n">shape_A</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-    <span class="n">shape_B</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+    <span class="n">shape_1</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+    <span class="n">shape_2</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
     
-    <span class="c1"># Verify the column count of A and the row count of B</span>
-    <span class="k">if</span> <span class="n">shape_A</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">shape_B</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">shape_1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">shape_2</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
         <span class="k">return</span> <span class="s1">&#39;The dimension don</span><span class="se">\&#39;</span><span class="s1">t match&#39;</span>
     
     <span class="n">BT</span> <span class="o">=</span> <span class="n">transpose</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
@@ -12036,10 +12022,10 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># run following code to test your matxMultiply function</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># run following code to test your matxMultiply function</span>
 <span class="o">%</span><span class="k">run</span> -i -e test.py LinearRegressionTestCase.test_matxMultiply
 </pre></div>
 
@@ -12057,7 +12043,7 @@ OK
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>.
 ----------------------------------------------------------------------
-Ran 1 test in 0.200s
+Ran 1 test in 0.044s
 
 OK
 </pre>
@@ -12099,10 +12085,10 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#TODO construct the augment matrix of matrix A and column vector b, assuming A and b have same number of rows</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#TODO construct the augment matrix of matrix A and column vector b, assuming A and b have same number of rows</span>
 <span class="k">def</span> <span class="nf">augmentMatrix</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">[</span> <span class="n">ra</span> <span class="o">+</span> <span class="n">rb</span> <span class="k">for</span> <span class="n">ra</span><span class="p">,</span> <span class="n">rb</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">)]</span>
 </pre></div>
@@ -12114,10 +12100,10 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># run following code to test your augmentMatrix function</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># run following code to test your augmentMatrix function</span>
 <span class="o">%</span><span class="k">run</span> -i -e test.py LinearRegressionTestCase.test_augmentMatrix
 </pre></div>
 
@@ -12135,7 +12121,7 @@ OK
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>.
 ----------------------------------------------------------------------
-Ran 1 test in 0.019s
+Ran 1 test in 0.022s
 
 OK
 </pre>
@@ -12162,10 +12148,10 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO r1 &lt;---&gt; r2</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO r1 &lt;---&gt; r2</span>
 <span class="c1"># TODO in-place operation, no return value</span>
 <span class="k">def</span> <span class="nf">swapRows</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">r1</span><span class="p">,</span> <span class="n">r2</span><span class="p">):</span>
     <span class="n">M</span><span class="p">[</span><span class="n">r1</span><span class="p">],</span><span class="n">M</span><span class="p">[</span><span class="n">r2</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="n">r2</span><span class="p">],</span><span class="n">M</span><span class="p">[</span><span class="n">r1</span><span class="p">]</span>
@@ -12178,10 +12164,10 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># run following code to test your swapRows function</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># run following code to test your swapRows function</span>
 <span class="o">%</span><span class="k">run</span> -i -e test.py LinearRegressionTestCase.test_swapRows
 </pre></div>
 
@@ -12199,7 +12185,7 @@ OK
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>.
 ----------------------------------------------------------------------
-Ran 1 test in 0.006s
+Ran 1 test in 0.089s
 
 OK
 </pre>
@@ -12212,10 +12198,10 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO r1 &lt;--- r1 * scale</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO r1 &lt;--- r1 * scale</span>
 <span class="c1"># TODO in-place operation, no return value</span>
 <span class="k">def</span> <span class="nf">scaleRow</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">scale</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">scale</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
@@ -12232,10 +12218,10 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># run following code to test your scaleRow function</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># run following code to test your scaleRow function</span>
 <span class="o">%</span><span class="k">run</span> -i -e test.py LinearRegressionTestCase.test_scaleRow
 </pre></div>
 
@@ -12253,7 +12239,7 @@ OK
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>.
 ----------------------------------------------------------------------
-Ran 1 test in 0.006s
+Ran 1 test in 0.024s
 
 OK
 </pre>
@@ -12266,10 +12252,10 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO r1 &lt;--- r1 + r2*scale</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO r1 &lt;--- r1 + r2*scale</span>
 <span class="c1"># TODO in-place operation, no return value</span>
 <span class="k">def</span> <span class="nf">addScaledRow</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">r1</span><span class="p">,</span> <span class="n">r2</span><span class="p">,</span> <span class="n">scale</span><span class="p">):</span>
     <span class="n">row</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="n">r2</span><span class="p">]</span>
@@ -12287,10 +12273,10 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># run following code to test your addScaledRow function</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># run following code to test your addScaledRow function</span>
 <span class="o">%</span><span class="k">run</span> -i -e test.py LinearRegressionTestCase.test_addScaledRow
 </pre></div>
 
@@ -12308,7 +12294,7 @@ OK
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>.
 ----------------------------------------------------------------------
-Ran 1 test in 0.006s
+Ran 1 test in 0.049s
 
 OK
 </pre>
@@ -12347,10 +12333,10 @@ Step 2: Construct augmented matrix Ab</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#TODO implement gaussian jordan method to solve Ax = b</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#TODO implement gaussian jordan method to solve Ax = b</span>
 
 <span class="sd">&quot;&quot;&quot; Gauss-jordan method to solve x such that Ax = b.</span>
 <span class="sd">        A: square matrix, list of lists</span>
@@ -12364,9 +12350,8 @@ Step 2: Construct augmented matrix Ab</p>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="k">def</span> <span class="nf">gj_Solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">decPts</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="mf">1.0e-16</span><span class="p">):</span>
- 
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
-        <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="bp">None</span>
     <span class="n">augment_matrix</span> <span class="o">=</span> <span class="n">augmentMatrix</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
     <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">augment_matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
@@ -12379,7 +12364,7 @@ Step 2: Construct augmented matrix Ab</p>
                 <span class="n">index</span> <span class="o">=</span> <span class="n">i</span>
             <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>   
         <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">max</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">epsilon</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">None</span>
+            <span class="k">return</span> <span class="bp">None</span>
         <span class="n">swapRows</span><span class="p">(</span><span class="n">augment_matrix</span><span class="p">,</span><span class="n">index</span><span class="p">,</span><span class="n">count</span><span class="p">)</span>
         <span class="n">scaleRow</span><span class="p">(</span><span class="n">augment_matrix</span><span class="p">,</span><span class="n">count</span><span class="p">,</span><span class="mf">1.0</span><span class="o">/</span><span class="nb">max</span><span class="p">)</span>
         <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
@@ -12402,10 +12387,10 @@ Step 2: Construct augmented matrix Ab</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># run following code to test your addScaledRow function</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># run following code to test your addScaledRow function</span>
 <span class="o">%</span><span class="k">run</span> -i -e test.py LinearRegressionTestCase.test_gj_Solve
 </pre></div>
 
@@ -12423,7 +12408,7 @@ Step 2: Construct augmented matrix Ab</p>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>.
 ----------------------------------------------------------------------
-Ran 1 test in 0.112s
+Ran 1 test in 2.845s
 
 OK
 </pre>
@@ -12461,8 +12446,8 @@ OK
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>TODO Please use latex （refering to the latex in problem may help）</p>
-<p>TODO Proof：</p>
-<p>Let I be a square of m * m, since I is a unit matrix, the first m rows of the first column of Y can be obtained by linear combinations of columns of I, and since Z is an all-zero matrix and the first column of Y is Zero, then the first column of Y is the linear combination of the preceding m columns, so A is not full rank, A is the singular matrix</p>
+<p>TODO Proof：
+Let I be a square of m * m, since I is a unit matrix, the first m rows of the first column of Y can be obtained by linear combinations of columns of I, and since Z is an all-zero matrix and the first column of Y is Zero, then the first column of Y is the linear combination of the preceding m columns, so A is not full rank, A is the singular matrix</p>
 
 </div>
 </div>
@@ -12569,33 +12554,7 @@ $$
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>TODO Please use latex （refering to the latex in problem may help）</p>
 <p>TODO Proof：</p>
-<p>f(x)=mx + b</p>
-<p>Y =  \begin{bmatrix}
-    y_1 \
-    y_2 \
-    ... \
-    y_n
-\end{bmatrix}
-,
-X =  \begin{bmatrix}
-    x_1 &amp; 1 \
-    x_2 &amp; 1\
-    ... &amp; ...\
-    x_n &amp; 1 \
-\end{bmatrix},
-h =  \begin{bmatrix}
-    m \
-    b \
-\end{bmatrix}</p>
-<p>f(X)=Xh</p>
-$$
-E(h)=(Y-f(X))^2=(Y-Xh)^2=（Y-Xh)^T\times(Y-Xh)=Y^TY -2(Xh)^TY + (Xh)^TXh
-$$$$
-\begin{bmatrix}
-    \frac{\partial E}{\partial m} \\
-    \frac{\partial E}{\partial b} 
-\end{bmatrix}  = \frac{\partial E}{\partial h} = \frac{\partial (Y-Xh)^2}{\partial h}= -2X^T(Y-Xh)=2X^TXh - 2X^TY
-$$
+
 </div>
 </div>
 </div>
@@ -12610,10 +12569,10 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#TODO implement linear regression </span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#TODO implement linear regression </span>
 <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">points: list of (x,y) tuple</span>
 <span class="sd">return m and b</span>
@@ -12647,10 +12606,13 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#TODO Construct the linear function</span>
+
+<span class="c1">#TODO Construct points with gaussian noise</span>
+<span class="kn">import</span> <span class="nn">random</span>
 <span class="n">m</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">n</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
@@ -12660,8 +12622,9 @@ $$
     <span class="n">y</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span><span class="n">random</span><span class="o">.</span><span class="n">gauss</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">points</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">])</span>
     <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">m</span> <span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">linearRegression</span><span class="p">(</span><span class="n">points</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">m</span> <span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">linearRegression</span><span class="p">(</span><span class="n">points</span><span class="p">))</span>
+<span class="c1">#TODO Compute m and b and compare with ground truth</span>
 </pre></div>
 
 </div>
@@ -12676,8 +12639,8 @@ $$
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>79 14
-[[79.00058753799881], [13.960839229519493]]
+<pre>(66, 48)
+[[66.00403589570256], [47.89929848365887]]
 </pre>
 </div>
 </div>
