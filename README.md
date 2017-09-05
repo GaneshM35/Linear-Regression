@@ -1,7 +1,7 @@
 # Project 3: Linear Regression
 ### by Ganesh M
 
-Linear Regression website project, part of the Udacity [Machine Learning Engineering Nanodegree](https://in.udacity.com/course/machine-learning-engineer-nanodegree--nd009).
+Linear Regression project, part of the Udacity [Machine Learning Engineering Nanodegree](https://in.udacity.com/course/machine-learning-engineer-nanodegree--nd009).
 
 ## Linear regression project
 
